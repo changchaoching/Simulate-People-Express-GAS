@@ -26,7 +26,7 @@
         }
     </style>
 </head>
-<body class="bg-blue-800 text-slate-800 min-h-screen antialiased flex flex-col">
+<body class="bg-slate-50 text-slate-800 min-h-screen antialiased flex flex-col">
 
     <!-- Top Navigation Bar (Bright Style + Google Sync Button) -->
     <header class="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-50 px-4 py-3 sm:px-6 shadow-sm">
@@ -439,6 +439,10 @@
                 <div class="flex justify-between text-slate-600"><span>累計營業淨利：</span><strong id="modalSummaryProfit" class="text-emerald-600 font-bold">$2.6M</strong></div>
                 <div class="flex justify-between text-slate-600"><span>機隊與員工規模：</span><strong id="modalSummaryScale" class="text-slate-800">10 架 / 300 人</strong></div>
                 <div class="flex justify-between text-slate-600"><span>服務聲譽與載客率：</span><strong id="modalSummaryReputation" class="text-indigo-600">1.00 (67.9%)</strong></div>
+                <div class="flex flex-col gap-0.5 text-slate-600 pt-1 border-t border-slate-200">
+                    <span>模擬結束訊息通知：</span>
+                    <strong id="modalSummaryMessage" class="text-amber-700 font-medium break-words text-[11px] leading-snug">營運進行中</strong>
+                </div>
             </div>
 
             <!-- 雙工作表說明提示 -->

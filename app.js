@@ -536,6 +536,17 @@ function openSubmitModal() {
     setText('modalSummaryScale', `${engine.planes} 架客機 / ${engine.experiencedStaff + engine.rookieStaff} 位員工`);
     setText('modalSummaryReputation', `${engine.serviceReputation.toFixed(2)} (載客率: ${(engine.loadFactor * 100).toFixed(1)}%)`);
 
+    const msgBox = document.getElementById('modalSummaryMessage');
+    if (msgBox) {
+        if (engine.isGameOver) {
+            msgBox.textContent = engine.gameOverReason || "模擬已結束結算";
+            msgBox.className = engine.cash < -20.0 ? "text-rose-600 font-bold break-words text-[11px] leading-snug" : "text-emerald-700 font-bold break-words text-[11px] leading-snug";
+        } else {
+            msgBox.textContent = "營運進行中（尚未觸發結束或破產條件）";
+            msgBox.className = "text-amber-700 font-medium break-words text-[11px] leading-snug";
+        }
+    }
+
     const msgEl = document.getElementById('submitResultMsg');
     if (msgEl) msgEl.innerHTML = '';
 
